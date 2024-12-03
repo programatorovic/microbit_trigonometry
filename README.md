@@ -12,7 +12,7 @@ This extension provides trigonometric functions for **Micro:bit** in the **MakeC
 
 ### How to Use:
 1. Open the **MakeCode** editor for **Micro:bit**.
-2. Add this extension from the "Extensions" menu using the GitHub URL: `https://github.com/YOUR_USERNAME/YOUR_REPO_NAME`.
+2. Add this extension from the "Extensions" menu using the GitHub URL: `https://github.com/programatorovic/microbit_trigonometry.git`.
 3. Use the `trigonometria` block to perform trigonometric calculations.
 
 Example:
