@@ -17,6 +17,6 @@ This extension provides trigonometric functions for **Micro:bit** in the **MakeC
 
 Example:
 ```blocks
-let result = trigonometria("sin", 30)
+let result = trigonometry("sin", 30)
 
 This will calculate the sine of 30 degrees.
