@@ -9,7 +9,7 @@ namespace TrigonometryBlocks {
      * @param angle Angle in degrees for the operation
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
-    //% operation.shadow="dropdown" operation.defl=TrigonometricOperations.sin
+    //% operation.defl=TrigonometricOperations.sin
     //% angle.defl=0
     //% group="Math Trig"
     export function trigonometry(operation: TrigonometricOperations, angle: number): number {
@@ -34,6 +34,7 @@ namespace TrigonometryBlocks {
 
     // Provide dropdown options for operations
     //% blockId=trigonometry_operation_enum block="%operation"
+    //% blockHidden=true
     export enum TrigonometricOperations {
         // Dropdown options
         sin = "sin",
