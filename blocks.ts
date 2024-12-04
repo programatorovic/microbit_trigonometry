@@ -10,8 +10,7 @@ namespace TrigonometryBlocks {
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
     //% operation.defl="sin"
-    //% angle.shadow="math_number"
-    //% angle.defl=0
+    //% angle.min=-Infinity angle.max=Infinity
     //% group="Math Trig"
     export function trigonometry(operation: string, angle: number): number {
         let result = 0;
