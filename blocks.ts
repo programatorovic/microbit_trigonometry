@@ -9,23 +9,23 @@ namespace TrigonometryBlocks {
      * @param angle Angle in degrees for the operation
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
-    //% operation.defl="sin"
+    //% operation.shadow="dropdown" operation.defl=TrigonometricOperations.sin
     //% angle.defl=0
     //% group="Math Trig"
-    export function trigonometry(operation: string, angle: number): number {
+    export function trigonometry(operation: TrigonometricOperations, angle: number): number {
         let result = 0;
 
-        if (operation == "sin") {
+        if (operation == TrigonometricOperations.sin) {
             result = Trigonometry.sinFunction(angle);
-        } else if (operation == "cos") {
+        } else if (operation == TrigonometricOperations.cos) {
             result = Trigonometry.cosFunction(angle);
-        } else if (operation == "tan") {
+        } else if (operation == TrigonometricOperations.tan) {
             result = Trigonometry.tanFunction(angle);
-        } else if (operation == "asin") {
+        } else if (operation == TrigonometricOperations.asin) {
             result = Trigonometry.asinFunction(angle);
-        } else if (operation == "acos") {
+        } else if (operation == TrigonometricOperations.acos) {
             result = Trigonometry.acosFunction(angle);
-        } else if (operation == "atan") {
+        } else if (operation == TrigonometricOperations.atan) {
             result = Trigonometry.atanFunction(angle);
         }
 
@@ -34,7 +34,6 @@ namespace TrigonometryBlocks {
 
     // Provide dropdown options for operations
     //% blockId=trigonometry_operation_enum block="%operation"
-    //% blockHidden=true
     export enum TrigonometricOperations {
         // Dropdown options
         sin = "sin",
