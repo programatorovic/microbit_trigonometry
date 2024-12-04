@@ -10,6 +10,7 @@ namespace TrigonometryBlocks {
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
     //% operation.defl="sin"
+    //% angle.shadow="math_number"
     //% angle.defl=0
     //% group="Math Trig"
     export function trigonometry(operation: string, angle: number): number {
@@ -30,14 +31,5 @@ namespace TrigonometryBlocks {
         }
 
         return result;
-    }
-
-    /**
-     * Dropdown menu options for operations
-     */
-    //% blockId=trigonometry_operation_menu block="%operation"
-    //% blockHidden=true
-    export function operationMenu(operation: string): string {
-        return operation;
     }
 }
