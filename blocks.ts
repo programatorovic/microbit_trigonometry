@@ -9,39 +9,35 @@ namespace TrigonometryBlocks {
      * @param angle Angle in degrees for the operation
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
-    //% operation.defl=TrigonometricOperations.sin
+    //% operation.defl="sin"
     //% angle.defl=0
     //% group="Math Trig"
-    export function trigonometry(operation: TrigonometricOperations, angle: number): number {
+    export function trigonometry(operation: string, angle: number): number {
         let result = 0;
 
-        if (operation == TrigonometricOperations.sin) {
+        if (operation == "sin") {
             result = Trigonometry.sinFunction(angle);
-        } else if (operation == TrigonometricOperations.cos) {
+        } else if (operation == "cos") {
             result = Trigonometry.cosFunction(angle);
-        } else if (operation == TrigonometricOperations.tan) {
+        } else if (operation == "tan") {
             result = Trigonometry.tanFunction(angle);
-        } else if (operation == TrigonometricOperations.asin) {
+        } else if (operation == "asin") {
             result = Trigonometry.asinFunction(angle);
-        } else if (operation == TrigonometricOperations.acos) {
+        } else if (operation == "acos") {
             result = Trigonometry.acosFunction(angle);
-        } else if (operation == TrigonometricOperations.atan) {
+        } else if (operation == "atan") {
             result = Trigonometry.atanFunction(angle);
         }
 
         return result;
     }
 
-    // Provide dropdown options for operations
-    //% blockId=trigonometry_operation_enum block="%operation"
+    /**
+     * Dropdown menu options for operations
+     */
+    //% blockId=trigonometry_operation_menu block="%operation"
     //% blockHidden=true
-    export enum TrigonometricOperations {
-        // Dropdown options
-        sin = "sin",
-        cos = "cos",
-        tan = "tan",
-        asin = "asin",
-        acos = "acos",
-        atan = "atan"
+    export function operationMenu(operation: string): string {
+        return operation;
     }
 }
