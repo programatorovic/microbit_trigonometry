@@ -1,15 +1,16 @@
 // blocks.ts
 
 // Namespace for graphical blocks and category setup
-
-//% color=#800080 icon="\u222B" block="Math Trig"
+//% color=#800080 icon="\u223F" block="Math Trig"
 namespace TrigonometryBlocks {
     /**
      * Performs a trigonometric operation on the given angle
-     * @param operation Type of trigonometric operation: "sin", "cos", "tan", etc.
+     * @param operation Type of trigonometric operation
      * @param angle Angle in degrees for the operation
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
+    //% operation.defl="sin"
+    //% angle.defl=0
     //% group="Math Trig"
     export function trigonometry(operation: string, angle: number): number {
         let result = 0;
@@ -29,5 +30,18 @@ namespace TrigonometryBlocks {
         }
 
         return result;
+    }
+
+    // Provide dropdown options for operations
+    //% blockId=trigonometry_operation_enum block="%operation"
+    //% blockHidden=true
+    export enum TrigonometricOperations {
+        // Dropdown options
+        sin = "sin",
+        cos = "cos",
+        tan = "tan",
+        asin = "asin",
+        acos = "acos",
+        atan = "atan"
     }
 }
