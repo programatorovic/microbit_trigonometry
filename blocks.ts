@@ -1,7 +1,16 @@
 // blocks.ts
 
+// Namespace for graphical blocks and category setup
+
+//% color=#800080 icon="\u222B" block="Math Trig"
 namespace TrigonometryBlocks {
-    // Pridanie bloku s trigonometrickými funkciami
+    /**
+     * Performs a trigonometric operation on the given angle
+     * @param operation Type of trigonometric operation: "sin", "cos", "tan", etc.
+     * @param angle Angle in degrees for the operation
+     */
+    //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
+    //% group="Math Trig"
     export function trigonometry(operation: string, angle: number): number {
         let result = 0;
 
