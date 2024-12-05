@@ -10,29 +10,28 @@ namespace TrigonometryBlocks {
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
     //% operation.defl="sin"
-    //% angle.shadow="math_number" angle.defl=0
+    //% angle.min=-Infinity angle.max=Infinity
     //% group="Math Trig"
-    export function trigonometry(operation: TrigonometricOperations, angle: number): number {
+    export function trigonometry(operation: string, angle: number): number {
         let result = 0;
 
-        // Match the operation and calculate
-        if (operation == TrigonometricOperations.sin) {
+        if (operation == "sin") {
             result = Trigonometry.sinFunction(angle);
-        } else if (operation == TrigonometricOperations.cos) {
+        } else if (operation == "cos") {
             result = Trigonometry.cosFunction(angle);
-        } else if (operation == TrigonometricOperations.tan) {
+        } else if (operation == "tan") {
             result = Trigonometry.tanFunction(angle);
-        } else if (operation == TrigonometricOperations.asin) {
+        } else if (operation == "asin") {
             result = Trigonometry.asinFunction(angle);
-        } else if (operation == TrigonometricOperations.acos) {
+        } else if (operation == "acos") {
             result = Trigonometry.acosFunction(angle);
-        } else if (operation == TrigonometricOperations.atan) {
+        } else if (operation == "atan") {
             result = Trigonometry.atanFunction(angle);
         }
 
         return result;
     }
-
+    
     /**
      * Enum for dropdown menu options for operations
      */
