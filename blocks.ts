@@ -4,42 +4,68 @@
 //% color=#800080 icon="\u223F" block="Math Trig"
 namespace TrigonometryBlocks {
     /**
-     * Performs a trigonometric operation on the given angle
-     * @param operation Type of trigonometric operation
-     * @param angle Angle in degrees for the operation
+     * Calculates the sine of an angle
+     * @param angle Angle in degrees
      */
-    //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
-    //% operation.shadow="dropdown" operation.defl="sin"
+    //% blockId=sin_function block="sin of %angle|degrees"
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
-    export function trigonometry(operation: string, angle: number): number {
-        let numericAngle = +angle; // Explicitly convert input to a number
-        let result = 0;
-
-        // Match the operation and calculate
-        if (operation == "sin") {
-            result = Trigonometry.sinFunction(numericAngle);
-        } else if (operation == "cos") {
-            result = Trigonometry.cosFunction(numericAngle);
-        } else if (operation == "tan") {
-            result = Trigonometry.tanFunction(numericAngle);
-        } else if (operation == "asin") {
-            result = Trigonometry.asinFunction(numericAngle);
-        } else if (operation == "acos") {
-            result = Trigonometry.acosFunction(numericAngle);
-        } else if (operation == "atan") {
-            result = Trigonometry.atanFunction(numericAngle);
-        }
-
-        return result;
+    export function sin(angle: number): number {
+        return Trigonometry.sinFunction(angle);
     }
 
     /**
-     * Dropdown menu for trigonometric operations
+     * Calculates the cosine of an angle
+     * @param angle Angle in degrees
      */
-    //% blockId=trigonometry_dropdown block="%operation"
-    //% blockHidden=true
-    export function operationDropdown(operation: string): string {
-        return operation;
+    //% blockId=cos_function block="cos of %angle|degrees"
+    //% angle.shadow="math_number" angle.defl=0
+    //% group="Math Trig"
+    export function cos(angle: number): number {
+        return Trigonometry.cosFunction(angle);
+    }
+
+    /**
+     * Calculates the tangent of an angle
+     * @param angle Angle in degrees
+     */
+    //% blockId=tan_function block="tan of %angle|degrees"
+    //% angle.shadow="math_number" angle.defl=0
+    //% group="Math Trig"
+    export function tan(angle: number): number {
+        return Trigonometry.tanFunction(angle);
+    }
+
+    /**
+     * Calculates the arcsine of a value
+     * @param value Input value (must be between -1 and 1)
+     */
+    //% blockId=asin_function block="asin of %value"
+    //% value.shadow="math_number" value.defl=0
+    //% group="Math Trig"
+    export function asin(value: number): number {
+        return Trigonometry.asinFunction(value);
+    }
+
+    /**
+     * Calculates the arccosine of a value
+     * @param value Input value (must be between -1 and 1)
+     */
+    //% blockId=acos_function block="acos of %value"
+    //% value.shadow="math_number" value.defl=0
+    //% group="Math Trig"
+    export function acos(value: number): number {
+        return Trigonometry.acosFunction(value);
+    }
+
+    /**
+     * Calculates the arctangent of a value
+     * @param value Input value
+     */
+    //% blockId=atan_function block="atan of %value"
+    //% value.shadow="math_number" value.defl=0
+    //% group="Math Trig"
+    export function atan(value: number): number {
+        return Trigonometry.atanFunction(value);
     }
 }
