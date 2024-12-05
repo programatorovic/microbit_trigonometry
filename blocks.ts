@@ -7,7 +7,7 @@ namespace TrigonometryBlocks {
      * Calculates the sine of an angle
      * @param angle Angle in degrees
      */
-    //% blockId=sin_function block="sin of %angle|degrees"
+    //% blockId=sin_function block="sin %angle|degrees"
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
     export function sin(angle: number): number {
@@ -18,7 +18,7 @@ namespace TrigonometryBlocks {
      * Calculates the cosine of an angle
      * @param angle Angle in degrees
      */
-    //% blockId=cos_function block="cos of %angle|degrees"
+    //% blockId=cos_function block="cos %angle|degrees"
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
     export function cos(angle: number): number {
@@ -29,7 +29,7 @@ namespace TrigonometryBlocks {
      * Calculates the tangent of an angle
      * @param angle Angle in degrees
      */
-    //% blockId=tan_function block="tan of %angle|degrees"
+    //% blockId=tan_function block="tan %angle|degrees"
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
     export function tan(angle: number): number {
@@ -40,7 +40,7 @@ namespace TrigonometryBlocks {
      * Calculates the arcsine of a value
      * @param value Input value (must be between -1 and 1)
      */
-    //% blockId=asin_function block="asin of %value"
+    //% blockId=asin_function block="asin %value"
     //% value.shadow="math_number" value.defl=0
     //% group="Math Trig"
     export function asin(value: number): number {
@@ -51,7 +51,7 @@ namespace TrigonometryBlocks {
      * Calculates the arccosine of a value
      * @param value Input value (must be between -1 and 1)
      */
-    //% blockId=acos_function block="acos of %value"
+    //% blockId=acos_function block="acos %value"
     //% value.shadow="math_number" value.defl=0
     //% group="Math Trig"
     export function acos(value: number): number {
@@ -62,7 +62,7 @@ namespace TrigonometryBlocks {
      * Calculates the arctangent of a value
      * @param value Input value
      */
-    //% blockId=atan_function block="atan of %value"
+    //% blockId=atan_function block="atan %value"
     //% value.shadow="math_number" value.defl=0
     //% group="Math Trig"
     export function atan(value: number): number {
