@@ -9,45 +9,36 @@ namespace TrigonometryBlocks {
      * @param angle Angle in degrees for the operation
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
+    //% operation.shadow="dropdown" operation.defl="sin"
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
-    export function trigonometry(operation: TrigonometricOperations, angle: number): number {
+    export function trigonometry(operation: string, angle: number): number {
         let result = 0;
 
-        // Use the selected operation to calculate the result
-        switch (operation) {
-            case TrigonometricOperations.sin:
-                result = Trigonometry.sinFunction(angle);
-                break;
-            case TrigonometricOperations.cos:
-                result = Trigonometry.cosFunction(angle);
-                break;
-            case TrigonometricOperations.tan:
-                result = Trigonometry.tanFunction(angle);
-                break;
-            case TrigonometricOperations.asin:
-                result = Trigonometry.asinFunction(angle);
-                break;
-            case TrigonometricOperations.acos:
-                result = Trigonometry.acosFunction(angle);
-                break;
-            case TrigonometricOperations.atan:
-                result = Trigonometry.atanFunction(angle);
-                break;
+        // Match the operation and calculate
+        if (operation == "sin") {
+            result = Trigonometry.sinFunction(angle);
+        } else if (operation == "cos") {
+            result = Trigonometry.cosFunction(angle);
+        } else if (operation == "tan") {
+            result = Trigonometry.tanFunction(angle);
+        } else if (operation == "asin") {
+            result = Trigonometry.asinFunction(angle);
+        } else if (operation == "acos") {
+            result = Trigonometry.acosFunction(angle);
+        } else if (operation == "atan") {
+            result = Trigonometry.atanFunction(angle);
         }
 
         return result;
     }
 
     /**
-     * Enum for dropdown menu options for operations
+     * Dropdown menu for trigonometric operations
      */
-    export enum TrigonometricOperations {
-        sin = "sin",
-        cos = "cos",
-        tan = "tan",
-        asin = "asin",
-        acos = "acos",
-        atan = "atan"
+    //% blockId=trigonometry_dropdown block="%operation"
+    //% blockHidden=true
+    export function operationDropdown(operation: string): string {
+        return operation;
     }
 }
