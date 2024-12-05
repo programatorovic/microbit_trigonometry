@@ -14,19 +14,26 @@ namespace TrigonometryBlocks {
     export function trigonometry(operation: TrigonometricOperations, angle: number): number {
         let result = 0;
 
-        // Match the operation and calculate
-        if (operation == TrigonometricOperations.sin) {
-            result = Trigonometry.sinFunction(angle);
-        } else if (operation == TrigonometricOperations.cos) {
-            result = Trigonometry.cosFunction(angle);
-        } else if (operation == TrigonometricOperations.tan) {
-            result = Trigonometry.tanFunction(angle);
-        } else if (operation == TrigonometricOperations.asin) {
-            result = Trigonometry.asinFunction(angle);
-        } else if (operation == TrigonometricOperations.acos) {
-            result = Trigonometry.acosFunction(angle);
-        } else if (operation == TrigonometricOperations.atan) {
-            result = Trigonometry.atanFunction(angle);
+        // Use the selected operation to calculate the result
+        switch (operation) {
+            case TrigonometricOperations.sin:
+                result = Trigonometry.sinFunction(angle);
+                break;
+            case TrigonometricOperations.cos:
+                result = Trigonometry.cosFunction(angle);
+                break;
+            case TrigonometricOperations.tan:
+                result = Trigonometry.tanFunction(angle);
+                break;
+            case TrigonometricOperations.asin:
+                result = Trigonometry.asinFunction(angle);
+                break;
+            case TrigonometricOperations.acos:
+                result = Trigonometry.acosFunction(angle);
+                break;
+            case TrigonometricOperations.atan:
+                result = Trigonometry.atanFunction(angle);
+                break;
         }
 
         return result;
