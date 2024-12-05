@@ -1,22 +1,24 @@
-# Microbit Trigonometry Extension
+# Micro:bit Trigonometry Extension
 
-This extension provides trigonometric functions for **Micro:bit** in the **MakeCode** editor.
+This extension provides trigonometric functions for the BBC micro:bit in the MakeCode environment. It includes blocks for the following trigonometric operations:
 
-### Available Functions:
-- **sin(angle)**: Returns the sine of the angle in degrees.
-- **cos(angle)**: Returns the cosine of the angle in degrees.
-- **tan(angle)**: Returns the tangent of the angle in degrees.
-- **asin(value)**: Returns the inverse sine of the value, in degrees.
-- **acos(value)**: Returns the inverse cosine of the value, in degrees.
-- **atan(value)**: Returns the inverse tangent of the value, in degrees.
+- **sin**: Calculates the sine of an angle in degrees.
+- **cos**: Calculates the cosine of an angle in degrees.
+- **tan**: Calculates the tangent of an angle in degrees.
+- **asin**: Calculates the arcsine of a value (returns angle in degrees).
+- **acos**: Calculates the arccosine of a value (returns angle in degrees).
+- **atan**: Calculates the arctangent of a value (returns angle in degrees).
 
-### How to Use:
-1. Open the **MakeCode** editor for **Micro:bit**.
-2. Add this extension from the "Extensions" menu using the GitHub URL: `https://github.com/programatorovic/microbit_trigonometry.git`.
-3. Use the `trigonometry` block to perform trigonometric calculations.
+## How to Use
 
-Example:
-```blocks
-let result = trigonometry("sin", 30)
+1. Import this extension into your MakeCode project by using its GitHub URL.
+2. After importing, you will see a new category **"Math Trig"** in the MakeCode block editor.
+3. Use the provided blocks to perform trigonometric calculations with angles or values.
 
-This will calculate the sine of 30 degrees.
+## Example Usage
+
+### Example 1: Calculating the sine of an angle
+```typescript
+let angle = 30;
+let result = TrigonometryBlocks.sin(angle);
+basic.showNumber(result);
