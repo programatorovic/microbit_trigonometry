@@ -9,24 +9,24 @@ namespace TrigonometryBlocks {
      * @param angle Angle in degrees for the operation
      */
     //% blockId=trigonometry_operation block="trigonometry %operation|of %angle|degrees"
-    //% operation.defl="sin"
+    //% operation.shadow="dropdown" operation.defl=TrigonometricOperations.sin
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
-    export function trigonometry(operation: string, angle: number): number {
+    export function trigonometry(operation: TrigonometricOperations, angle: number): number {
         let result = 0;
 
         // Match the operation and calculate
-        if (operation == "sin") {
+        if (operation == TrigonometricOperations.sin) {
             result = Trigonometry.sinFunction(angle);
-        } else if (operation == "cos") {
+        } else if (operation == TrigonometricOperations.cos) {
             result = Trigonometry.cosFunction(angle);
-        } else if (operation == "tan") {
+        } else if (operation == TrigonometricOperations.tan) {
             result = Trigonometry.tanFunction(angle);
-        } else if (operation == "asin") {
+        } else if (operation == TrigonometricOperations.asin) {
             result = Trigonometry.asinFunction(angle);
-        } else if (operation == "acos") {
+        } else if (operation == TrigonometricOperations.acos) {
             result = Trigonometry.acosFunction(angle);
-        } else if (operation == "atan") {
+        } else if (operation == TrigonometricOperations.atan) {
             result = Trigonometry.atanFunction(angle);
         }
 
@@ -34,11 +34,14 @@ namespace TrigonometryBlocks {
     }
 
     /**
-     * Dropdown menu options for operations
+     * Enum for dropdown menu options for operations
      */
-    //% blockId=trigonometry_operation_menu block="%operation"
-    //% blockHidden=true
-    export function operationMenu(operation: string): string {
-        return operation;
+    export enum TrigonometricOperations {
+        sin = "sin",
+        cos = "cos",
+        tan = "tan",
+        asin = "asin",
+        acos = "acos",
+        atan = "atan"
     }
 }
