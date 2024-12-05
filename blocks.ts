@@ -13,21 +13,22 @@ namespace TrigonometryBlocks {
     //% angle.shadow="math_number" angle.defl=0
     //% group="Math Trig"
     export function trigonometry(operation: string, angle: number): number {
+        let numericAngle = +angle; // Explicitly convert input to a number
         let result = 0;
 
         // Match the operation and calculate
         if (operation == "sin") {
-            result = Trigonometry.sinFunction(angle);
+            result = Trigonometry.sinFunction(numericAngle);
         } else if (operation == "cos") {
-            result = Trigonometry.cosFunction(angle);
+            result = Trigonometry.cosFunction(numericAngle);
         } else if (operation == "tan") {
-            result = Trigonometry.tanFunction(angle);
+            result = Trigonometry.tanFunction(numericAngle);
         } else if (operation == "asin") {
-            result = Trigonometry.asinFunction(angle);
+            result = Trigonometry.asinFunction(numericAngle);
         } else if (operation == "acos") {
-            result = Trigonometry.acosFunction(angle);
+            result = Trigonometry.acosFunction(numericAngle);
         } else if (operation == "atan") {
-            result = Trigonometry.atanFunction(angle);
+            result = Trigonometry.atanFunction(numericAngle);
         }
 
         return result;
