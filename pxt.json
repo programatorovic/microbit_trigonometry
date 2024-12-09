@@ -1,14 +1,16 @@
 {
-  "name": "Microbit Trigonometry Extension",
-  "description": "An extension with trigonometric functions for Micro:bit.",
-  "version": "0.2.5",
-  "dependencies": {
-    "core": "*"
-  }
-  "files": [
-    "main.ts",
-    "blocks.ts"
-    "pxt.json"
-  ],
-  "public": true,
+    "name": "Microbit Trigonometry Extension",
+    "description": "An extension with trigonometric functions for Micro:bit.",
+    "version": "0.2.4",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "main.ts",
+        "blocks.ts",
+        "pxt.json"
+    ],
+    "public": true,
+    "url": "https://github.com/programatorovic/microbit_trigonometry.git",
+    "icon": "icon.png"
 }
